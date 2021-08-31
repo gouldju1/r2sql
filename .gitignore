@@ -10,3 +10,11 @@
 ./cosql/resources/local_param/pytorch_model.bin
 ./cosql/resources/local_param/cache_roberta_base.zip
 ./cosql/model/bert/data/annotated_wikisql_and_PyTorch_bert_param/pytorch_model_uncased_L-12_H-768_A-12.bin
+cosql/glove_embeddings.pkl
+cosql/resources/database/soccer_1/schema.sql
+cosql/resources/database/soccer_1/soccer_1.sqlite
+cosql/resources/database/wta_1/wta_1.sqlite
+cosql/resources/glove.840B.300d.txt
+cosql/resources/local_param/cache_roberta_base.zip
+cosql/resources/local_param/cosql_reranker_roberta.pt
+cosql/resources/local_param/pytorch_model.bin
