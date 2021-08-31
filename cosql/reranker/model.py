@@ -6,7 +6,7 @@ class ReRanker(nn.Module):
     def __init__(self, args=None, base_model="roberta"):
         super(ReRanker, self).__init__()
         self.args = args
-        self.bert_model = RobertaModel.from_pretrained('./local_param/')
+        self.bert_model = RobertaModel.from_pretrained('/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/local_param')
         self.cls_model = nn.Sequential(
                         nn.Linear(768, 128),
                         nn.Tanh(),

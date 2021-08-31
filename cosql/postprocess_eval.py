@@ -16,7 +16,7 @@ torch.manual_seed(1)
 stop_word = set({'=', 'is', 'and', 'desc', '!=', 'select', ')', '_UNK', 'max', '0', 'none', 'order', 'like', 'join', '>', 'on', 'count', 'or', 'from', 'group_by', 'limit', '<=', 'sum', 'group', '(', '_EOS', 'intersect', 'order_by', 'limit_value', '-', 'except', 'where', 'distinct', 'avg', '<', 'min', 'asc', '+', 'in', 'union', 'between', 'exists', '/', 'having', 'not', 'as', '>=', 'value', ',', '*'})
 
 #ranker = Ranker("./cosql_train_48.pt")
-ranker = Ranker("./submit_models/cosql_reranker_roberta.pt")
+ranker = Ranker("/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/local_param/cosql_reranker_roberta.pt")
 def find_shortest_path(start, end, graph):
     stack = [[start, []]]
     visited = list()

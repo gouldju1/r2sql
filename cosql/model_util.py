@@ -6,8 +6,6 @@ import random
 import sys
 import json
 import progressbar
-import model.torch_utils
-import data_util.sql_util
 import torch
 
 def write_prediction(fileptr,

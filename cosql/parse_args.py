@@ -160,7 +160,8 @@ def interpret_args():
     if args.train:
         args_file = args.logdir + '/args.log'
         if os.path.exists(args_file):
-            raise ValueError('Warning: arguments already exist in ' + str(args_file))
+            os.remove(args_file)
+            # raise ValueError('Warning: arguments already exist in ' + str(args_file))
         with open(args_file, 'w') as infile:
             infile.write(str(args))
            

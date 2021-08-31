@@ -7,13 +7,13 @@ python3 preprocess.py --dataset=cosql --remove_from
 #    the result (models, logs, prediction outputs) are saved in $LOGDIR
 
 LOGDIR='log/cosql'
-GLOVE_PATH="/dev/shm/glove_embeddings.pkl" # you need to change this
+GLOVE_PATH="resources/glove.840B.300d.txt" # you need to change this
 
-CUDA_VISIBLE_DEVICES=0 python3 run.py --raw_train_filename="data/cosql_data_removefrom/train.pkl" \
-          --raw_validation_filename="data/cosql_data_removefrom/dev.pkl" \
-          --database_schema_filename="data/cosql_data_removefrom/tables.json" \
+CUDA_VISIBLE_DEVICES=0 python3 run.py --raw_train_filename="resources/data/cosql/train.json" \
+          --raw_validation_filename="resources/data/cosql/dev.json" \
+          --database_schema_filename="resources/data/cosql/tables.json" \
           --embedding_filename=$GLOVE_PATH \
-          --data_directory="processed_data_cosql_removefrom" \
+          --data_directory="processed_data_cosql" \
           --input_key="utterance" \
           --state_positional_embeddings=1 \
           --discourse_level_lstm=1 \

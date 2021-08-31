@@ -8,7 +8,10 @@ from .utils import preprocess
 class Ranker:
     def __init__(self, model_path, base_model='roberta'):
         self.model = ReRanker(base_model=base_model)
-        self.model.load_state_dict(torch.load(model_path))
+        if torch.cuda.is_available():
+            self.model.load_state_dict(torch.load(model_path))
+        else:
+            self.model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')), strict=False)
         self.tokenizer = RobertaTokenizer.from_pretrained('roberta-base', max_len=512)
         print("load reranker model from ", model_path)
         

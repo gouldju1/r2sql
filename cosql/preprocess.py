@@ -482,25 +482,25 @@ def preprocess(dataset, remove_from=False):
   print()
 
   if dataset == 'spider':
-    spider_dir = 'data/spider/'
-    database_schema_filename = 'data/spider/tables.json'
-    output_dir = 'data/spider_data'
+    spider_dir = '/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/spider/'
+    database_schema_filename = '/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/spider/tables.json'
+    output_dir = '/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/spider_data'
     if remove_from:
-      output_dir = 'data/spider_data_removefrom'
+      output_dir = '//Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/spider_data_removefrom'
     train_database, dev_database = read_db_split(spider_dir)
   elif dataset == 'sparc':
-    sparc_dir = 'data/sparc/'
-    database_schema_filename = 'data/sparc/tables.json'
-    output_dir = 'data/sparc_data'
+    sparc_dir = '/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/sparc/'
+    database_schema_filename = '/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/sparc/tables.json'
+    output_dir = '/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/sparc_data'
     if remove_from:
-      output_dir = 'data/sparc_data_removefrom'
+      output_dir = '//Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/sparc_data_removefrom'
     train_database, dev_database = read_db_split(sparc_dir)
   elif dataset == 'cosql':
-    cosql_dir = 'data/cosql/'
-    database_schema_filename = 'data/cosql/tables.json'
-    output_dir = 'data/cosql_data'
+    cosql_dir = '/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/cosql/'
+    database_schema_filename = '/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/cosql/tables.json'
+    output_dir = '/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/cosql_data'
     if remove_from:
-      output_dir = 'data/cosql_data_removefrom'
+      output_dir = '/Users/gould29/OneDrive - purdue.edu/GitHub/r2sql/cosql/resources/data/cosql_data_removefrom'
     train_database, dev_database = read_db_split(cosql_dir)
 
   if os.path.isdir(output_dir):
